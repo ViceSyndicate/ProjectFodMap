@@ -1,0 +1,74 @@
+﻿@model ProjectFodMap.Data.Models.Meal
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Meal</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.MealName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MealName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MealName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MealIngredients, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 ">
+                @*Using the razor code below to auto generate html generates code that doesn't work. 
+                    I thereforce hardcoded the textarea instead. This does not work on the Edit view so i left that alone.*@
+                @*@Html.TextAreaFor(model => model.MealIngredients, new { htmlAttributes = new { @class = "form-control" } })*@
+                <textarea cols="20" id="MealIngredients" name="MealIngredients" rows="2" class="form-control"></textarea>
+
+                @Html.ValidationMessageFor(model => model.MealIngredients, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MealInstructions, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea cols="20" class="form-control" id="MealInstructions" name="MealInstructions" rows="2"></textarea>
+                @*@Html.TextAreaFor(model => model.MealInstructions, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.MealInstructions, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MealNotes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea cols="20" class="form-control" id="MealNotes" name="MealNotes" rows="2"></textarea>
+                @*@Html.TextAreaFor(model => model.MealNotes, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.MealNotes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MealRisks, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea cols="20" class="form-control" id="MealRisks" name="MealRisks" rows="2"></textarea>
+                @*@Html.TextAreaFor(model => model.MealRisks, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.MealRisks, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Meals")
+</div>

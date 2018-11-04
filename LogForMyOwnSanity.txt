@@ -1,0 +1,5 @@
+Dependencies and Referrences
+
+ProjectFodMap has ProjectFodMap.Data as a Dependency
+AND
+ProjectFodMap has ProjectFodMap.Data as a Refrence

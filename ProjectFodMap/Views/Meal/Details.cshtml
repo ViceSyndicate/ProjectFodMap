@@ -1,0 +1,62 @@
+﻿@model ProjectFodMap.Data.Models.Meal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meal</h4>
+    <hr />
+
+    <div style="display: inline-block; width:90%">
+        <dl class="divider">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MealName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MealName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MealIngredients)
+            </dt>
+
+            <dd style="display: inline-block; width:90%">
+                @Html.DisplayTextFor(model => model.MealIngredients)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MealInstructions)
+            </dt>
+
+            <dd style="display: inline-block; width:90%">
+                @Html.DisplayFor(model => model.MealInstructions)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MealNotes)
+            </dt>
+
+            <dd style="display: inline-block; width:90%">
+                @Html.DisplayFor(model => model.MealNotes)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MealRisks)
+            </dt>
+
+            <dd style="display: inline-block; width:90%">
+                @Html.DisplayFor(model => model.MealRisks)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @*@Html.ActionLink("Details", "Details", new { id = Model.MealID })*@
+        @Html.ActionLink("Back to List", "Meals")
+    </p>

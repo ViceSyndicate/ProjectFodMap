@@ -1,0 +1,1 @@
+Please place the SQLite file/dir in C:\

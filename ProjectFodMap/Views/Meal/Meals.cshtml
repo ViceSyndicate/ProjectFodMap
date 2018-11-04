@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProjectFodMap.Data.ViewModels.MealListingVM>
+
+
+@{
+    ViewBag.Title = "Meals";
+}
+
+<script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+
+<h2>Meals</h2>
+
+<p>
+    @Html.ActionLink("Create Meal", "Create")
+</p>
+
+<form method="post" action="@Url.Action("Meals")" data-otf-ajax="true" data-otf-target="mealList" id="ajaxForm">
+    <div style="display: inline-block">
+        <input type="search" placeholder="Search for Meals" name="searchStr" id="SearchBar" class="form-control" style="margin-top:10px;" />
+    </div>
+
+    <div style="display: inline-block;">
+        <input type="button" value="Search" id="SubmitButton" class="btn btn-default" />
+    </div>
+</form>
+
+<div id="_PartialMeals">
+    @Html.Partial("~/Views/Shared/_MealsTable.cshtml", Model)
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/MyJavaScript.js"></script>

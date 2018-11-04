@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjectFodMap.Data.ViewModels.MealListingVM>
+
+<div id="mealList">
+
+    <table class="table" id="tMeals">
+        <tr>
+            <th>
+                Meal Name
+            </th>
+            <th>
+                Ingredients
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.MealID)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.MealName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealIngredients)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.MealID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.MealID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MealID })
+            </td>
+        </tr>
+        }
+    </table>
+</div>
