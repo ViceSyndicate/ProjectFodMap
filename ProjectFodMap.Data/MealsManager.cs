@@ -14,7 +14,6 @@ namespace ProjectFodMap.Data
     /// 
     /// Precompiled Binaries for .NET might work too.
     /// </summary>
-    /// 
     public class MealsManager
     {
         public static string conString = "Data Source=C:\\SQLite\\ProjectFodMap.db";
