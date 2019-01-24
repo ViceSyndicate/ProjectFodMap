@@ -1,3 +1,8 @@
+ToDo: 
+- Make text fields of Edit meals bigger. 
+- Optimize Search to return all meals containing query words. 
+
+
 Dependencies and Referrences
 
 ProjectFodMap has ProjectFodMap.Data as a Dependency
