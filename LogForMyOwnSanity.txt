@@ -1,8 +1,10 @@
-Simplify Meals & Their Fields/Properties: Name, Ingredients, Notes
-to save Ingredients ammount i create extra table. Ex: 
-grams_recipe, cl_recipe that has a field for the recipe id it belongs to.
+CREATE TABLE `Meals` (
+	`MealID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`MealName`	TEXT NOT NULL UNIQUE,
+	`MealNotes`	TEXT NOT NULL UNIQUE
+);
 
-Joint table....
+
 
 
 ToDo: 
