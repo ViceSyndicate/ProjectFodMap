@@ -1,3 +1,10 @@
+Simplify Meals & Their Fields/Properties: Name, Ingredients, Notes
+to save Ingredients ammount i create extra table. Ex: 
+grams_recipe, cl_recipe that has a field for the recipe id it belongs to.
+
+Joint table....
+
+
 ToDo: 
 - Make text fields of Edit meals bigger. 
 - Optimize Search to return all meals containing query words. 

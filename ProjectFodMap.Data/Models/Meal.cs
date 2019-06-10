@@ -16,7 +16,7 @@ namespace ProjectFodMap.Data.Models
         public string MealName { get; set; }
 
         [Required]
-        [StringLength(maximumLength: 40, MinimumLength = 2, ErrorMessage = "* Please Enter a Ingredient. 2 - 40 Letters")]
+        [StringLength(maximumLength: 120, MinimumLength = 2, ErrorMessage = "* Please Enter a Ingredient. 2 - 40 Letters")]
         public string MealIngredients { get; set; }
 
         public string MealInstructions { get; set; }
